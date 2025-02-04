@@ -145,3 +145,5 @@ comandos
 static
 #media
 media
+
+local_settings.py
