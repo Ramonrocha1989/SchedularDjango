@@ -1,11 +1,3 @@
-# from django.shortcuts import render
-
-# def index(request):
-#     return render(
-#         request, 
-#         'contact/index.html'
-#         )
-
 from django.core.paginator import Paginator
 from django.db.models import Q
 from django.shortcuts import get_object_or_404, redirect, render
@@ -69,20 +61,20 @@ def index(request):
 #     )
 
 
-# def contact(request, contact_id):
-#     # single_contact = Contact.objects.filter(pk=contact_id).first()
-#     single_contact = get_object_or_404(
-#         Contact, pk=contact_id, show=True
-#     )
-#     site_title = f'{single_contact.first_name} {single_contact.last_name} - '
+def contact(request, contact_id):
+    # single_contact = Contact.objects.filter(pk=contact_id).first()
+    single_contact = get_object_or_404(
+        Contact, pk=contact_id, show=True
+    )
+    site_title = f'{single_contact.first_name} {single_contact.last_name} - '
 
-#     context = {
-#         'contact': single_contact,
-#         'site_title': site_title
-#     }
+    context = {
+        'contact': single_contact,
+        'site_title': site_title
+    }
 
-#     return render(
-#         request,
-#         'contact/contact.html',
-#         context
-#     )
+    return render(
+        request,
+        'contact/contact.html',
+        context
+    )
