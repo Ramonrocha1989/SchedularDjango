@@ -18,7 +18,7 @@ def index(request):
     context = {
         'contacts': contacts,
         # 'page_obj': page_obj,
-        # 'site_title': 'Contatos - '
+        'site_title': 'Contacts - '
     }
 
     return render(
